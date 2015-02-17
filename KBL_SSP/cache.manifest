@@ -1,0 +1,28 @@
+CACHE MANIFEST
+# hash 4IPK39lsQZW1SzZGYMc1v4+5cV0=
+# uuid dbb44dff89bb410c8cc0cb3561fe4f0e
+
+KBL_SSP.css
+KBL_SSP.html
+KBL_SSP.js
+KBL_SSP_custom.js
+res/images/homescreenPrompt.png
+res/images/icon.png
+res/images/sw-alpha-multi.png
+res/images/sw-alpha.png
+res/images/sw-button-cancel.png
+res/images/sw-button-done.png
+res/images/sw-check.png
+res/images/sw-header.png
+res/images/sw-no-check.png
+res/images/sw-slot-border.png
+res/iscroll.js
+res/jquery-1.8.3.min.js
+res/phoneui.js
+res/spinningwheel.css
+res/spinningwheel.js
+rte/cordova.js
+rte/readme.txt
+rte/rte.js
+
+NETWORK:
