@@ -1,6 +1,6 @@
 /*
  *  MobiOne PhoneUI Framework
- *  version 2.6.2.201408151938
+ *  version 2.6.4.20141126
  *  <http://genuitec.com/mobile/resources/phoneui>
  *  (c) Copyright 2010-2012 Genuitec, LLC
  *
@@ -68,7 +68,10 @@ $(document).ready(function() {
 
 	// Hide splash screen if we're in Cordova
 	document.addEventListener("deviceready", function () {
-		navigator.splashscreen.hide();
+		//navigator.splashscreen.hide();
+		if (typeof StatusBar != "undefined") {
+			StatusBar.overlaysWebView(false);
+		}
 	}, false);
 
 	var FN_EMPTY = function() {};
@@ -182,7 +185,13 @@ $(document).ready(function() {
 	}
 
 	if (isIPhone) {
-		var isIPhone5 = (window.screen.height == 568);
+		var iPhoneModels = {
+			480 : { height : 480, width : 320 }, // iPhones from 1 to 4
+			568 : { height : 568, width : 320 }, // iPhone5
+			667 : { height : 667, width : 375 }, // iPhone6
+			736 : { height : 736, width : 414 }, // iPhone6+
+		};
+		var iPhoneModel = iPhoneModels[window.screen.height];
 
 		// iphone platform
 		phoneui._platform = $.extend(defPlatform, {
@@ -215,8 +224,8 @@ $(document).ready(function() {
 				window.scrollTo(0, 0);
 			},
 			isFullScreenMode : function() {
-				return window.innerHeight == 320 &&
-					(isIPhone5 ? window.innerWidth == 568 : window.innerWidth == 480);
+				return window.innerHeight == iPhoneModel.width &&
+					(window.innerWidth == iPhoneModel.height);
 			},
 			docsize : function() {
 				if (phoneui._platform.isFullScreenMode()) {
@@ -240,8 +249,8 @@ $(document).ready(function() {
 					} 
 				}
 				return {
-					x : (p ? 320 : (480 + (isIPhone5 ? 88 : 0))),
-					y : ((p ? (480 + (isIPhone5 ? 88 : 0)) : 320) - bb) };
+					x : (p ? iPhoneModel.width : iPhoneModel.height),
+					y : ((p ? iPhoneModel.height : iPhoneModel.width) - bb) };
 			},
 			touchevents : function() {
 				return true;
@@ -454,7 +463,7 @@ $(document).ready(function() {
 							that.keybIsOn = true;
 						} else {
 							if (that.keybIsOn) {
-								// 
+								// %%DEBUG 'Virtual keyboard is hidden'
 
 								// $("." + m1Design.css('top-root')).scrollTop = 0;
 								$("." + m1Design.css('top-root')).css('top', 0);
@@ -1274,7 +1283,7 @@ $(document).ready(function() {
 	}
 
 	function animateNavigation($new, $old, transition, revertTransition, fnAfterTransition) {
-		// 
+		// %%DEBUG "animateNavigation", $new.attr("id"), transition
 		
 		if (document && document.activeElement && ('blur' in document.activeElement)) {
 			document.activeElement.blur(); // Unfocus currently active document.
@@ -1599,6 +1608,13 @@ $(document).ready(function() {
 			patchWindowClose: false
 		};
 		
+		options.patchWindowClose = false; //wp - added to force 
+		
+		//Wayne - replaced Childbrowser use for latest ME Build, 
+		// PGB childbrowser does not support local files, only remote urls
+		var iabOptions = options.showNavigationBar ? "toolbar=yes" : "toolbar=no";
+		iabOptions += options.showAddress ? ",location=yes" : ",location=no";
+		
 		// Android web view doesn't support PDF files, so adding a hack here
 		if (phoneui.cordovaAvailable() && 
 			device.platform === "Android" && 
@@ -1609,14 +1625,14 @@ $(document).ready(function() {
 		if (openIn === "_self") {
 			phoneui._platform.showURLInMainWindowUsing(url);
 		} else if (phoneui.cordovaAvailable()) {
-			if (!(window.plugins && window.plugins.childBrowser))
-				if (ChildBrowser.install)
-					ChildBrowser.install();
-			if (window.plugins && window.plugins.childBrowser) {
+			//if (!(window.plugins && window.plugins.ChildBrowser))
+			//	 if (ChildBrowser.install) ChildBrowser.install();
+			if (window.plugins && window.plugins.ChildBrowser) {
 				if (openIn === "_system") {
-					return window.plugins.childBrowser.openExternal(url, false);
+					return window.plugins.ChildBrowser.openExternal(url, false);
 				} else {
-					var ref = window.plugins.childBrowser.showWebPage(url, options);
+					//var ref = window.plugins.ChildBrowser.showWebPage(url, options);
+					var ref = window.open(url,'_blank',iabOptions);
 					
 					if (options.patchWindowClose) {
 						var loadStopHandler = function() {
@@ -1714,8 +1730,8 @@ $(document).ready(function() {
 	 *  For web applications length of all url-encoded parameters should not exceed 2000 chars.
 	 */
 	phoneui.composeEmail = function(subject, body, to, cc, bcc, isHTML) {
-		if (phoneui.cordovaAvailable() && window.plugins.emailComposer) {
-			window.plugins.emailComposer.showEmailComposer(subject, body, to, cc, bcc, isHTML);
+		if (phoneui.cordovaAvailable() && window.plugins.EmailComposer) {
+			window.plugins.EmailComposer.showEmailComposer(subject, body, [to], [cc], [bcc], isHTML);
 		} else {
 			phoneui.showURL("mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body), "_system");
 		}
@@ -1846,7 +1862,7 @@ $(document).ready(function() {
 	var maxMoveY = screen.availHeight/10;
 	var clickbuster = {
 		preventGhostClick: function(x, y) {
-			// 
+			// %%DEBUG "preventGhostClick", x, y
 			coordinates.push(x, y);
 			window.setTimeout(clickbuster.pop, 500);
 		},
@@ -1875,7 +1891,7 @@ $(document).ready(function() {
 				}
 			}
 
-			// 
+			// %%DEBUG "needToIgnore", eventX, eventY, "returned", ignore 
 
 			return ignore;
 		}
@@ -2109,7 +2125,7 @@ $(document).ready(function() {
 		 * @return true if event is not processed and should be bubbled, false otherwise
 		 */
 		var doClick = function($that, sx, sy) {
-			// 
+			// %%DEBUG "doClick is called for", sx, sy
 			var ret = true;
 
 			if (!clickbuster.needToIgnore(sx, sy)) {
@@ -2994,7 +3010,7 @@ phoneui._extraPageInitializers = [];
 phoneui.version = {
 	major : 2,
 	minor : 6,
-	maintenance : 2,
+	maintenance : 4,
 	toString : function() {
 		return this.major + "." + this.minor + "." + this.maintenance;
 	}

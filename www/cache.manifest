@@ -1,11 +1,12 @@
 CACHE MANIFEST
-# hash 4IPK39lsQZW1SzZGYMc1v4+5cV0=
-# uuid dbb44dff89bb410c8cc0cb3561fe4f0e
+# hash MuOIzAZRSaDlpzXzvtH69GWXnE8=
+# uuid aca3c593e22947f9ac95a2d645a3cc90
 
-KBL_SSP.css
-KBL_SSP.html
-KBL_SSP.js
-KBL_SSP_custom.js
+images/logo%20%20SCREEN.png
+KBL_PSP.css
+KBL_PSP.html
+KBL_PSP.js
+KBL_PSP_custom.js
 res/images/homescreenPrompt.png
 res/images/icon.png
 res/images/sw-alpha-multi.png
