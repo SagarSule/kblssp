@@ -1,0 +1,34 @@
+# run this script from the root of the project
+# before running on windows machine create 
+#   ~/AppData/Local/Temp/plugman/git/ directory
+
+
+phonegap plugins add https://github.com/apache/cordova-plugin-battery-status.git
+phonegap plugins add https://github.com/apache/cordova-plugin-camera.git 
+phonegap plugins add https://github.com/apache/cordova-plugin-media-capture.git 
+phonegap plugins add https://github.com/apache/cordova-plugin-console.git 
+phonegap plugins add https://github.com/apache/cordova-plugin-contacts.git
+phonegap plugins add https://github.com/apache/cordova-plugin-device.git
+phonegap plugins add https://github.com/apache/cordova-plugin-device-motion.git
+phonegap plugins add https://github.com/apache/cordova-plugin-device-orientation.git
+phonegap plugins add https://github.com/apache/cordova-plugin-dialogs.git
+phonegap plugins add https://github.com/apache/cordova-plugin-file.git
+phonegap plugins add https://github.com/apache/cordova-plugin-file-transfer.git
+phonegap plugins add https://github.com/apache/cordova-plugin-geolocation.git
+phonegap plugins add https://github.com/apache/cordova-plugin-globalization.git
+phonegap plugins add https://github.com/apache/cordova-plugin-inappbrowser.git
+phonegap plugins add https://github.com/apache/cordova-plugin-media.git
+phonegap plugins add https://github.com/apache/cordova-plugin-network-information.git
+phonegap plugins add https://github.com/apache/cordova-plugin-splashscreen.git
+phonegap plugins add https://github.com/apache/cordova-plugin-vibration.git
+
+
+phonegap plugins add https://github.com/hazemhagrass/EmailComposer.git 
+phonegap plugins add https://github.com/genuitec-mobione/mobione-plugin.git 
+#  phonegap plugins add http://github.com/phonegap-build/ChildBrowser.git 
+phonegap plugins add https://github.com/mayurloved/Childbrowser-Phonegap3.x
+phonegap plugins add https://github.com/phonegap-build/StatusBarPlugin.git 
+
+phonegap plugins list
+
+ 
