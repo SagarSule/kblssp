@@ -7,7 +7,9 @@
 	version="1.1.0">
     
     <name>KBL_PSP</name>
-    <description>Provides structure for linking a PhoneGap Build project to a MobiOne project content directory and building it using PhoneGap remote and local build services.</description>
+    <description>App to operate with PSP model. 
+Client - Kirloskar Brothers Ltd.
+(c) AakarArts 2015</description>
     <author email="sagar@aakararts.com" href="http://www.aakararts.com.com">Aakar Arts</author>
     
     <!-- Either rename your prj startup html file to index.html or replace index.html below
@@ -20,7 +22,7 @@
     -->
     <!-- <preference name="phonegap-version" value="3.5.0"/> -->
     
-	<preference name="StatusBarOverlaysWebView" value="false"/> 
+	<preference name="StatusBarOverlaysWebView" value="true"/> 
 	<preference name="StatusBarBackgroundColor" value="#000000"/>
 	<preference name="StatusBarStyle" value="lightcontent"/>
     <!-- <preference name="ios-statusbarstyle" value="black-opaque"/> -->
@@ -29,7 +31,7 @@
      	  http://docs.build.phonegap.com/en_US/configuring_preferences.md.html#Preferences 
      -->
     <preference name="permissions" value="none"/>
-    <preference name="orientation" value="default"/>
+    <preference name="orientation" value="landscape"/>
     <preference name="target-device" value="tablet"/>
     <preference name="fullscreen" value="false"/> <!-- set false to show android statusbar -->
     <preference name="webviewbounce" value="true"/>
@@ -72,7 +74,7 @@
     <gap:plugin name="org.apache.cordova.statusbar"/>
     
 	<!-- Default app icon appearing on device homescreen -->    
-    <icon src="www/branding/icon.png"/>
+    <icon src="www/branding/logo.png"/>
 
 	<!-- Android app branding artwork -->
     <icon gap:platform="android" gap:qualifier="ldpi" src="www/branding/icon/android/KBL logo 48.png"/>
@@ -111,13 +113,14 @@
     <icon height="76" gap:platform="ios" width="76" src="www/branding/logo.png"/>
     <icon height="152" gap:platform="ios" width="152" src="www/branding/logo.png"/>
     <preference name="deployment-target" value="6.0"/>
-    <preference name="android-windowSoftInputMode" value="stateUnspecified"/>
+    <preference name="android-windowSoftInputMode" value="stateAlwaysHidden|adjustResize"/>
+    <preference name="splash-screen-duration" value="5000"/>
     <gap:splash gap:platform="android" gap:density="ldpi" src="www/branding/screen/android/screen psp.png"/>
     <gap:splash gap:platform="android" gap:density="mdpi" src="www/branding/screen/android/screen psp.png"/>
     <gap:splash gap:platform="android" gap:density="hdpi" src="www/branding/screen/android/screen psp.png"/>
     <gap:splash gap:platform="android" gap:density="xhdpi" src="www/branding/screen/android/screen psp.png"/>
     <gap:splash gap:platform="android" gap:density="xxhdpi" src="www/branding/screen/android/screen psp.png"/>
-    <gap:splash src="www/branding/screen psp.png"/>
+    <gap:splash src="www/branding/screen_psp.png"/>
     <gap:splash height="480" gap:platform="ios" width="320" src="www/branding/screen psp.png"/>
     <gap:splash height="960" gap:platform="ios" width="640" src="www/branding/screen psp.png"/>
     <gap:splash height="1136" gap:platform="ios" width="640" src="www/branding/screen psp.png"/>
