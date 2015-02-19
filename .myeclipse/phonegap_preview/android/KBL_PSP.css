@@ -1,0 +1,659 @@
+.m1-multipanel{
+  overflow: hidden;
+}
+
+.m1-root{
+  -webkit-user-select: none;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+}
+
+.m1-top-root{
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+}
+
+.m1-homescreen-prompt{
+  -webkit-box-sizing: content-box;
+  display: block;
+  font-size: 16px;
+  left: 50%;
+  opacity: 0;
+  position: absolute;
+  top: 450px;
+  z-index: 99;
+}
+
+.m1-loading-spinner{
+  float: left;
+  padding: 3px 3px 3px 3px;
+}
+
+.m1-loading-text{
+  display: block;
+  float: left;
+  max-width: 250px;
+  min-height: 15px;
+  padding: 10px 0px 10px 5px;
+  text-align: left;
+}
+
+.m1-loading{
+  display: none;
+  font-family: Helvetica;
+  font-size: 14px;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+  text-align: center;
+  top: 150px;
+  vertical-align: middle;
+  width: 100%;
+  z-index: 99;
+}
+
+.m1-button{
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0);
+  color: white;
+  cursor: pointer;
+  font-family: Helvetica;
+  font-size: 12px;
+  font-weight: bold;
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+.m1-iscroll-wrapper{
+  overflow: hidden;
+}
+
+.m1-root .m1-aux-hidden-div{
+  display: block;
+  height: 0px;
+  left: 0px;
+  overflow: hidden;
+  position: absolute;
+  top: 0px;
+  width: 0px;
+}
+
+
+  .m1-root .m1-combobox,.m1-root .m1-toolbar,.m1-root .m1-iscroll-wrapper,.m1-root .m1-map-container,.m1-root .m1-loading-text,.m1-root .m1-toggle,.m1-root .m1-button,.m1-root .m1-hyperlink,.m1-root .m1-custom-html,.m1-root .m1-video,.m1-root .m1-multipanel,.m1-root .m1-iscroll-scroller,.m1-root .m1-element,.m1-root .m1-text,.m1-root .m1-tabbar-button,.m1-root .m1-audio,.m1-root .m1-radiobutton,.m1-root .m1-loading,.m1-root .m1-multipanel-page,.m1-root .m1-tabbar,.m1-root .m1-placeholder,.m1-root .m1-hyperlink-container,.m1-root .m1-select-list-menu,.m1-root .m1-image,.m1-root .m1-homescreen-prompt,.m1-root .m1-list,.m1-root .m1-list-footer,.m1-root .m1-play-button,.m1-root .m1-video-container,.m1-root .m1-loading-spinner,.m1-root .m1-textfield,.m1-root .m1-list-header,.m1-root .m1-textarea,.m1-root .m1-video-poster-shadow,.m1-root .m1-toolbar-icon,.m1-root .m1-checkbox,.m1-root .m1-video-poster,.m1-root .m1-tabbar-button-label,.m1-root .m1-selection-list,.m1-root .m1-hyperlink-internal,.m1-root .m1-toggle5,.m1-root .m1-navbar,.m1-root .m1-list > li,.m1-root .m1-list > li > div,.m1-root .m1-list > li > img,.m1-root .m1-list > li > label,.m1-root .m1-list > li > div > img,.m1-root .m1-toggle > div,.m1-root .m1-toggle5 > div,.m1-root .m1-button > span
+  {
+  -webkit-box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  display: block;
+  float: none;
+  position: relative;
+  white-space: nowrap;
+}
+
+.m1-root .m1-custom-html{
+  line-height: normal;
+  overflow: hidden;
+  white-space: normal;
+}
+
+.m1-root .m1-multipanel-page{
+  display: none;
+  position: absolute;
+}
+
+.m1-root .m1-selected.m1-multipanel-page{
+  display: block;
+}
+
+.m1-root :focus{
+  outline: none;
+}
+
+.m1-root textarea.m1-textarea{
+  white-space: normal;
+}
+
+.m1-root textarea.m1-textarea.m1-placeholder{
+  color: rgb(153,153,153);
+}
+
+.m1-homescreen-prompt img{
+  display: block;
+  float: left;
+  margin: auto 20px 20px auto;
+}
+
+.m1-loading > div{
+  -webkit-border-radius: 8px;
+  -webkit-box-sizing: border-box;
+  background: rgba(0,0,0,.7);
+  color: rgba(255,255,255,.8);
+  display: table;
+  margin: 0px auto 0px auto;
+  padding: 0px 15px 0px 15px;
+  text-align: left;
+  width: auto;
+}
+
+.m1-background-1{
+  -webkit-background-size: 100%;
+  background-color: rgba(0,0,0,0);
+  background-image: url(images/logo%20%20SCREEN.png);
+  background-repeat: no-repeat;
+}
+
+.m1-font-1{
+  color: rgb(0,0,0);
+  font-family: Arial;
+  font-size: 36px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.m1-shadow-1{
+  text-shadow: rgb(255,255,255) 0px 1px 1px;
+}
+
+.m1-button.m1-font-2{
+  color: rgb(255,255,255);
+  font-family: Arial;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.m1-button.m1-shadow-2{
+  text-shadow: rgb(0,0,0) 0px -1px 1px;
+}
+
+.m1-background-2{
+  background-color: rgba(0,0,0,0);
+  background-image: 
+    -webkit-gradient(linear, 50.0% 0.0, 50.0% 100.0%, from(rgb(103,119,119)), to(rgb(64,64,64)), color-stop(0.499,rgb(70,81,81)), color-stop(0.501,rgb(64,64,64)));
+}
+
+.m1-clicked.m1-button.m1-background-3{
+  background-color: rgba(0,0,0,0);
+  background-image: 
+    -webkit-gradient(linear, 50.0% 0.0, 50.0% 100.0%, from(rgb(169,180,180)), to(rgb(128,128,128)), color-stop(0.499,rgb(131,148,148)), color-stop(0.501,rgb(128,128,128)));
+}
+
+.m1-clicked.m1-button.m1-active-color-1{
+  color: rgb(255,255,255);
+}
+
+.m1-border-1{
+  -webkit-border-radius: 0px;
+}
+
+.m1-background-4{
+  background-color: rgba(0,0,0,0);
+  background-image: none;
+}
+
+.m1-button.m1-shadow-3{
+  text-shadow: rgb(64,64,64) 0px -1px 1px;
+}
+
+body{
+  margin: 0px 0px 0px 0px;
+  overflow: visible;
+}
+
+#m1-KBL_PSP-mute{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 150px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-voldn{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 125px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-volup{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 100px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-stop{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 75px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-play{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 50px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-p_Commentary-box{
+  height: 625px;
+  left: 0px;
+  line-height: 625px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_Commentary{
+  height: 100.0%;
+  left: 0px;
+  top: 0px;
+  width: 100.0%;
+}
+
+#m1-KBL_PSP-DischargePipe{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 225px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-All{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 500px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-SodiumFlow{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 475px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-PipeReceptacle{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 450px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-Diffuser{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 350px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-Impeller{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 325px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-SuctionCasing{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 300px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-HydrostaticBearing{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 275px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-Shaft{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 250px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-RadialBearing{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 225px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-ThrustBearing{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 200px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-BottomMechanicalSeal{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 175px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-MiddleMechanicalSeal{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 150px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-TopMechanicalSeal{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 125px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-OilOutlet{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 100px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-OilInlet{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 75px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-Coupling{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 50px;
+  line-height: 50px;
+  text-align: center;
+  top: 50px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-p_Parts-box-scroller{
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 1350px;
+  left: 0px;
+  line-height: 40px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_Parts-box{
+  height: 625px;
+  left: 0px;
+  line-height: 625px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_Parts{
+  height: 100.0%;
+  left: 0px;
+  top: 0px;
+  width: 100.0%;
+}
+
+#m1-KBL_PSP-html2{
+  height: 900px;
+  left: 0px;
+  top: 0px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-p_PSP-box-scroller{
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 625px;
+  left: 0px;
+  line-height: 40px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_PSP-box{
+  height: 625px;
+  left: 0px;
+  line-height: 625px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_PSP{
+  height: 100.0%;
+  left: 0px;
+  top: 0px;
+  width: 100.0%;
+}
+
+#m1-KBL_PSP-html1{
+  height: 625px;
+  left: 0px;
+  top: 0px;
+  width: 500px;
+}
+
+#m1-KBL_PSP-p_KBL-box-scroller{
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 625px;
+  left: 0px;
+  line-height: 40px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_KBL-box{
+  height: 625px;
+  left: 0px;
+  line-height: 625px;
+  margin-right: 0px;
+  top: 0px;
+  width: auto;
+}
+
+#m1-KBL_PSP-p_KBL{
+  height: 100.0%;
+  left: 0px;
+  top: 0px;
+  width: 100.0%;
+}
+
+#m1-KBL_PSP-multiPage1{
+  height: 625px;
+  left: 500px;
+  line-height: 625px;
+  top: -193px;
+  width: 750px;
+}
+
+#m1-KBL_PSP-OL{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 75px;
+  line-height: 50px;
+  text-align: center;
+  top: 182px;
+  width: 400px;
+}
+
+#m1-KBL_PSP-Commentary{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 75px;
+  line-height: 50px;
+  text-align: center;
+  top: 157px;
+  width: 400px;
+}
+
+#m1-KBL_PSP-Parts{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 75px;
+  line-height: 50px;
+  text-align: center;
+  top: 132px;
+  width: 400px;
+}
+
+#m1-KBL_PSP-AboutPSP{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 75px;
+  line-height: 50px;
+  text-align: center;
+  top: 107px;
+  width: 400px;
+}
+
+#m1-KBL_PSP-AboutKBL{
+  -webkit-border-radius: 25px;
+  border-top-color: transparent;
+  border-width: 1px 0px 0px 0px;
+  height: 50px;
+  left: 75px;
+  line-height: 50px;
+  text-align: center;
+  top: 82px;
+  width: 400px;
+}
+
+#m1-KBL_PSP-text1{
+  height: 43px;
+  left: 417px;
+  line-height: 43px;
+  text-align: center;
+  top: 30px;
+  width: 427px;
+}
+

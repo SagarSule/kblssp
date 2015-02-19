@@ -1,0 +1,73 @@
+<!-- 
+version: 0.1.3
+
+Purpose: Import the contents of a MobiOne project into a MyEclipse PhoneGap project
+-->
+
+<project default="importMobiOneProjectContent">
+	
+	<!-- ***************************************************************** -->
+	<!-- MOBIONE developer - edit the following 2 properties to match your -->
+	<!--                     mobione project dir layout                    -->
+	<!--                                                                   -->
+	<!-- Path to the mobione project directory containing src files        -->
+	<!--   example-1:  value="c:\mobioneProjects\date-time\www\date-time"  -->
+	<!--   example-2:  value="c:\mobioneProjects\date-time\date-time-www\" -->
+	
+	<property name="mobionePrjWWWContentDir" value="D:\Projects\mobi\www\KBL_PSP" />
+	
+	<!-- File name of the startup html file. This file must reside in the  -->
+	<!-- directory you provide for the mobionePrjWWWContentDir property    -->
+	<!-- above.                                                            -->
+	
+	<property name="mobioneProjectHTMLStartupFile" value="KBL_PSP.html" />
+	
+	<!-- ***************************************************************** -->
+	
+	
+	<!-- do not modify below this line unless you know what you are doing -->
+	<target name="importMobiOneProjectContent">
+		<property name="myeclipseProjectDir"    value=".." />
+		<property name="myeclipseProjectWWWDir" value="${myeclipseProjectDir}/www" />
+
+		<echo>Synchronizing with MobiOne project content</echo>
+		<echo>Properties:</echo>
+		<echo>mobionePrjWWWContentDir=${mobionePrjWWWContentDir}</echo>		
+		<echo>mobioneProjectHTMLStartupFile=${mobioneProjectHTMLStartupFile}</echo>
+		<echo>myeclipseProjectDir=${myeclipseProjectDir}</echo>
+		<echo>myeclipseProjectWWWDir=${myeclipseProjectWWWDir}</echo>
+		<echo> </echo>
+		
+		<copy todir="${myeclipseProjectWWWDir}">
+		    <fileset dir="${mobionePrjWWWContentDir}">
+		      <exclude name=".codegen.cache.json"/>
+			  <exclude name="**/phoneui.js"/>
+		    </fileset>
+		  </copy>
+		
+		<replace file="${myeclipseProjectWWWDir}/${mobioneProjectHTMLStartupFile}"
+			token="rte/cordova.js"  value="phonegap.js" />			
+
+		<replace file="${myeclipseProjectWWWDir}/${mobioneProjectHTMLStartupFile}"
+			token="minimal-ui,"  value="" />	
+		
+		<replaceregexp file="${myeclipseProjectWWWDir}/config.xml"
+		               match="\&lt;content\s*.*"
+		               replace="\&lt;content src=\&quot;${mobioneProjectHTMLStartupFile}\&quot;/\&gt;"
+		               byline="true"
+		/>
+
+		<!-- remove junk files included by ME CI7 prj template, bug --> 
+		<delete file="${myeclipseProjectWWWDir}/res/.pgbomit"/>
+		<delete dir="${myeclipseProjectWWWDir}/res/icon/android" includeEmptyDirs="true" />
+		<delete dir="${myeclipseProjectWWWDir}/res/icon/ios" includeEmptyDirs="true"/>
+		<delete dir="${myeclipseProjectWWWDir}/res/screen" includeEmptyDirs="true"/>
+
+		
+		<echo>Synchronization completed.
+Refresh project using F5 key or right-click menu&gt;Refresh to update the project.
+		</echo>
+			
+	</target>
+	
+</project>
