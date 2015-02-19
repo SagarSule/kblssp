@@ -76,10 +76,10 @@ Client - Kirloskar Brothers Ltd.
 	<!-- Default app icon appearing on device homescreen -->
 
 	<!-- Android app branding artwork -->
-    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/branding/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-ldpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-mdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-hdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-xhdpi" src="www/images/screen.png"/>
 
 
 	<!-- iOS app branding artwork -->
@@ -109,23 +109,24 @@ Client - Kirloskar Brothers Ltd.
     <preference name="deployment-target" value="6.0"/>
     <preference name="android-windowSoftInputMode" value="stateAlwaysHidden|adjustResize"/>
     <preference name="splash-screen-duration" value="5000"/>
-    <icon src="www/branding/icon.png"/>
-    <icon gap:platform="android" gap:density="ldpi" src="www/branding/icon.png"/>
-    <icon gap:platform="android" gap:density="mdpi" src="www/branding/icon.png"/>
-    <icon gap:platform="android" gap:density="hdpi" src="www/branding/icon.png"/>
-    <icon gap:platform="android" gap:density="xhdpi" src="www/branding/icon.png"/>
-    <icon gap:platform="android" gap:density="xxhdpi" src="www/branding/icon.png"/>
+    <icon src="www/images/icon.png"/>
+    <icon gap:platform="android" gap:density="ldpi" src="www/images/icon.png"/>
+    <icon gap:platform="android" gap:density="mdpi" src="www/images/icon.png"/>
+    <icon gap:platform="android" gap:density="hdpi" src="www/images/icon.png"/>
+    <icon gap:platform="android" gap:density="xhdpi" src="www/images/icon.png"/>
+    <icon gap:platform="android" gap:density="xxhdpi" src="www/images/icon.png"/>
     <preference name="phonegap-version" value="3.6.3"/>
-    <gap:splash src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:density="ldpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:density="mdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:density="hdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:density="xhdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:density="xxhdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="land-ldpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="land-mdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="land-hdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="land-xhdpi" src="www/branding/screen.png"/>
-    <gap:splash gap:platform="android" gap:qualifier="land-xxhdpi" src="www/branding/screen.png"/>
+    <gap:splash src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:density="ldpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:density="mdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:density="hdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:density="xhdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:density="xxhdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="land-ldpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="land-mdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="land-hdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="land-xhdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="land-xxhdpi" src="www/images/screen.png"/>
+    <gap:splash gap:platform="android" gap:qualifier="port-xxhdpi" src="www/images/screen.png"/>
 	
 </widget>
